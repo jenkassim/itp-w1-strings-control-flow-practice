@@ -1,5 +1,21 @@
 def positions(a_string, first_word, second_word, third_word):
-    pass
+    
+    notFound = '-'
+    
+    s1 = a_string.find(first_word)
+    s2 = a_string.find(second_word)
+    s3 = a_string.find(third_word)
+
+    if s1 == -1:
+        s1 = notFound
+
+    if s2 == -1:
+        s2 = notFound
+
+    if s3 == -1:
+        s3 = notFound
+
+    return '{0},{1},{2}'.format(s1,s2,s3)
 
 
 def test_three_occurrences():
